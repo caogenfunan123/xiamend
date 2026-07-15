@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用 Hexo 搭建个人博客完全指南 - 小子的博客</title>
+  <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title"><a href="/">小子的博客</a></h1>
+      <p class="site-subtitle">记录生活的点滴</p>
+      <nav class="site-nav">
+        <a href="/">首页</a>
+        <a href="/archives/">归档</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <article class="article-content">
+      <h1>使用 Hexo 搭建个人博客完全指南</h1>
+      <div class="article-meta">2026年07月15日 · 技术 · 标签：Hexo, 教程, 博客</div>
+      <p>Hexo 是一个快速、简洁且高效的博客框架，支持 Markdown 语法，可以轻松生成静态网站。本文将详细介绍如何从零开始搭建自己的 Hexo 博客。</p>
+      <h2>一、环境准备</h2>
+      <p>首先需要安装 Node.js 和 Git。可以通过以下命令检查是否已安装：</p>
+      <pre><code>node -v
+git --version</code></pre>
+      <p>安装 Hexo CLI：</p>
+      <pre><code>npm install -g hexo-cli</code></pre>
+      <h2>二、初始化博客</h2>
+      <p>在你想存放博客的目录下执行：</p>
+      <pre><code>hexo init blog
+cd blog
+npm install</code></pre>
+      <h2>三、创建文章</h2>
+      <p>使用以下命令创建新文章：</p>
+      <pre><code>hexo new "我的第一篇文章"</code></pre>
+      <p>这会在 <code>source/_posts/</code> 目录下生成一个 Markdown 文件，你可以用任何编辑器编辑它。</p>
+      <h2>四、本地预览</h2>
+      <pre><code>hexo server</code></pre>
+      <p>打开浏览器访问 <code>http://localhost:4000</code> 即可预览。</p>
+      <h2>五、生成静态文件</h2>
+      <pre><code>hexo generate</code></pre>
+      <p>这会在 <code>public/</code> 目录下生成所有静态 HTML 文件。</p>
+      <h2>六、部署到 GitHub Pages</h2>
+      <p>修改 <code>_config.yml</code> 中的 deploy 配置：</p>
+      <pre><code>deploy:
+  type: git
+  repo: https://github.com/用户名/用户名.github.io.git
+  branch: main</code></pre>
+      <p>安装部署插件：</p>
+      <pre><code>npm install hexo-deployer-git --save</code></pre>
+      <p>执行部署：</p>
+      <pre><code>hexo deploy</code></pre>
+      <h2>七、部署到 Cloudflare Pages</h2>
+      <ol>
+        <li>将代码推送到 GitHub 仓库</li>
+        <li>在 Cloudflare Dashboard 中创建新的 Pages 项目</li>
+        <li>连接 GitHub 仓库</li>
+        <li>构建命令填写：<code>npm install && npx hexo generate</code></li>
+        <li>输出目录填写：<code>public</code></li>
+        <li>点击保存并部署</li>
+      </ol>
+      <h2>八、更换主题</h2>
+      <p>Hexo 有很多优秀主题，你可以从 <a href="https://hexo.io/themes/">官方主题库</a> 选择，也可以自己定制。将主题放到 <code>themes/</code> 目录下，修改 <code>_config.yml</code> 中的 theme 字段即可。</p>
+      <blockquote>建议先从简单主题开始，熟悉后逐步定制。</blockquote>
+      <h2>总结</h2>
+      <p>Hexo 搭建博客非常简单，只需要几步就可以拥有一个属于自己的博客。希望这篇文章对你有帮助！</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 <a href="https://caogenfunan123.github.io">小子</a>. Powered by Hexo.</p>
+    </div>
+  </footer>
+</body>
+</html>
