@@ -13,6 +13,7 @@ comments: false
 目前站点评论系统还没接外部服务，你可以通过下面方式联系我：
 
 - GitHub：https://github.com/caogenfunan123
-- 博客：https://xiamend.pages.dev
+- 博客：https://caogenfunan.me
+-邮箱1995@139.com
 
 > 之后如果接上评论系统，这一页会作为统一留言入口。
