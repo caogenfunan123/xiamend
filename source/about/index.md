@@ -19,3 +19,4 @@ layout: "post"
 
 - GitHub：https://github.com/caogenfunan123
 - 博客：https://xiamend.pages.dev
+- RSS：[/atom.xml](/atom.xml)

@@ -2,11 +2,23 @@
 menu:
   首页: /
   文章: /list/
+  作品: /works/
+  留言: /comments/
+  标签: /tags/
+  分类: /categories/
   关于: /about/
+  now: /now/
+  RSS: /atom.xml
 
 showInMenu:
   - 文章
+  - 作品
+  - 留言
+  - 标签
+  - 分类
   - 关于
+  - now
+  - RSS
 
 index:
   header:
@@ -21,9 +33,11 @@ index:
 
 footerLink:
   info: "© 2014-2026 小子"
-  归档: /archives/
+  文章: /list/
   标签: /tags/
   分类: /categories/
+  关于: /about/
+  RSS: /atom.xml
 
 post:
   footer: 🌊 写给认真生活的自己 🌊
