@@ -112,4 +112,9 @@ comment:
 inject:
   css: css/custom.css
 
+# 在<head>增加一个<base>元素，仅限有特殊需求者使用
+baseElement:
+  href:
+  target:
+
 version: v2.0.1
