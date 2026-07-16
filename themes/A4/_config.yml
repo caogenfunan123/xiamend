@@ -80,7 +80,7 @@ listInfo:
   animationDuration: 800
 
 cdn:
-  enable: true
+  enable: false
   choose: zzko
 
 color:

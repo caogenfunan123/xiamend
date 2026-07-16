@@ -26,8 +26,10 @@
         <div style="margin-bottom: 12px;"> 
             <% for (name in theme.menu) { %>
                 <% if(theme.menu[name] == '/') { %>
-                    <%= name %>
-                <% } else if(theme.showInMenu.includes(name)) { %>
+                    <a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
+                <% } else if(theme.showInMenu && theme.showInMenu.includes(name)) { %>
+                    &nbsp / &nbsp<a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
+                <% } else if(!theme.showInMenu) { %>
                     &nbsp / &nbsp<a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
                 <% } %>
             <% } %>

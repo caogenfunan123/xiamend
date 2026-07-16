@@ -3,6 +3,7 @@ title: now
 date: 2026-07-16 00:00:00
 type: "now"
 layout: "post"
+comments: false
 ---
 
 # now

@@ -3,6 +3,7 @@ title: 留言
 date: 2026-07-16 00:00:00
 type: "comments"
 layout: "post"
+comments: false
 ---
 
 # 留言
