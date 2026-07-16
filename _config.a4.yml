@@ -1,0 +1,101 @@
+# A4 theme config for 小子的博客
+menu:
+  首页: /
+  文章: /list/
+  关于: /about/
+
+showInMenu:
+  - 文章
+  - 关于
+
+index:
+  header:
+    - "记录生活的点滴"
+    - "写字，是为了把日子留住"
+    - "看过大海的人不会忘记海的广阔"
+  hitokoto: false
+  footer: "小子的博客 · https://xiamend.pages.dev"
+  titlePosition: left
+  width: small
+  list: false
+
+footerLink:
+  info: "© 2014-2026 小子"
+  归档: /archives/
+  标签: /tags/
+  分类: /categories/
+
+post:
+  footer: 🌊 写给认真生活的自己 🌊
+  themeInfo: true
+  width: middle
+  titlePosition: center
+
+favicon: /img/favicon.png
+isRoundedAvatar: true
+isAvatarRotating: false
+displayTitleInTab: true
+
+tool:
+  darkMode: true
+  returnToTop: true
+  returnToLast: true
+  topToc: true
+  leftToc: true
+  recentUpdatePost: true
+
+indexInfo:
+  allWordCount: true
+  allViewCount: false
+
+postInfo:
+  updateDate: true
+  wordCount: true
+  readTime: true
+  viewCount: false
+  prevAndNextLink:
+    status: true
+    prevInfo: 上一篇
+    nextInfo: 下一篇
+  endContent: 以上
+
+listInfo:
+  enable: true
+  hoverStyle: underline
+  hoverColor: "#4f7dde"
+  animationDuration: 800
+
+cdn:
+  enable: true
+  choose: zzko
+
+color:
+  enable: false
+
+imageShow:
+  enable: false
+
+font:
+  enable: false
+  LXGWWenKai: true
+
+lightgallery:
+  thumbnail: true
+  zoom: true
+  rotate: true
+  autoplay: true
+  fullScreen: true
+  pager: false
+
+comment:
+  enable: false
+  use: waline
+  waline:
+    serverUrl:
+    lang: zh-CN
+    placeholder: 留下你的评论吧。
+
+inject:
+  css: css/custom.css
+
+version: v2.0.1
