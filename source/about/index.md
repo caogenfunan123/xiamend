@@ -14,7 +14,7 @@ comments: false
 
 - 技术与工具使用
 - 生活随笔与旧日想法
-- 读书与成长笔记
+- 读书与成长笔记～
 
 站点使用 **Hexo + A4 主题**，部署在 **Cloudflare Pages**。
 
