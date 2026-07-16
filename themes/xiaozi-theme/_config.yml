@@ -1,5 +1,10 @@
 # 小子主题配置
-# 简约风格个人博客主题
+menu:
+  首页: /
+  归档: /archives/
+  标签: /tags/
+  分类: /categories/
+  关于: /2026/07/15/关于我/
 
-# 主题色
-primary_color: '#2196F3'
+primary_color: "#667eea"
+excerpt_length: 140

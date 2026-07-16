@@ -1,16 +1,21 @@
-<article class="post">
+<article class="post card post-detail">
   <h1 class="post-title"><%= page.title %></h1>
   <div class="post-meta">
-    <time><%= date(page.date, 'YYYY年MM月DD日') %></time>
-    <% if(page.categories && page.categories.length) { %>
-      <span class="post-category"> · <%= page.categories.map(function(cat){ return cat.name; }).join(' > ') %></span>
+    <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY年MM月DD日') %></time>
+    <% if (page.categories && page.categories.length) { %>
+      <span class="dot">·</span>
+      <span class="post-category"><%- list_categories(page.categories, {show_count:false, style:'none', separator:' / '}) %></span>
     <% } %>
-    <% if(page.tags && page.tags.length) { %>
-      <span class="post-tags"> · 标签：<%= page.tags.map(function(tag){ return tag.name; }).join(', ') %></span>
+    <% if (page.tags && page.tags.length) { %>
+      <span class="dot">·</span>
+      <span class="post-tags"><%- list_tags(page.tags, {show_count:false, style:'none', separator:' / '}) %></span>
     <% } %>
   </div>
   <div class="post-content">
     <%- page.content %>
   </div>
-  <a class="back-home" href="/">← 返回首页</a>
+  <div class="post-nav">
+    <a class="back-home" href="<%= url_for('/') %>">← 返回首页</a>
+    <a class="back-home" href="<%= url_for('/archives/') %>">查看归档</a>
+  </div>
 </article>

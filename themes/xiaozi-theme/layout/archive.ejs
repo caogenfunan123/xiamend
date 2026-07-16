@@ -1,0 +1,31 @@
+<section class="card archive-page">
+  <h1 class="page-title">归档</h1>
+  <%
+    var posts = page.posts.toArray ? page.posts.toArray() : page.posts;
+    var groups = {};
+    posts.forEach(function(post){
+      var y = date(post.date, 'YYYY');
+      if (!groups[y]) groups[y] = [];
+      groups[y].push(post);
+    });
+    Object.keys(groups).sort().reverse().forEach(function(year){
+  %>
+    <h2 class="archive-year"><%= year %></h2>
+    <ul class="archive-list">
+      <% groups[year].forEach(function(post){ %>
+        <li>
+          <time><%= date(post.date, 'MM-DD') %></time>
+          <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+        </li>
+      <% }) %>
+    </ul>
+  <% }) %>
+
+  <% if (page.total > 1) { %>
+    <nav class="pagination">
+      <% if (page.prev) { %><a class="prev" href="<%= url_for(page.prev_link) %>">← 上一页</a><% } %>
+      <span class="page-num"><%= page.current %> / <%= page.total %></span>
+      <% if (page.next) { %><a class="next" href="<%= url_for(page.next_link) %>">下一页 →</a><% } %>
+    </nav>
+  <% } %>
+</section>

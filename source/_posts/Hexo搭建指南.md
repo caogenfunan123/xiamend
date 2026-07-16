@@ -1,5 +1,5 @@
 ---
-title: 使用 Hexo 搭建个人博客完全指南
+title: "使用 Hexo 搭建个人博客完全指南"
 date: 2026-07-15 21:30:00
 tags:
 - Hexo

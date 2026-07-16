@@ -1,0 +1,11 @@
+<section class="card archive-page">
+  <h1 class="page-title">分类：<%= page.category %></h1>
+  <ul class="archive-list">
+    <% page.posts.each(function(post){ %>
+      <li>
+        <time><%= date(post.date, 'YYYY-MM-DD') %></time>
+        <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+      </li>
+    <% }) %>
+  </ul>
+</section>
