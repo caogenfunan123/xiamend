@@ -135,11 +135,11 @@
 
     <%- css('css/lightgallery-bundle.min.css') %>
 
-    <% if(theme.inject.css) { %>
+    <% if(theme.inject && theme.inject.css) { %>
         <%- css(theme.inject.css) %>
     <% } %>
 
-    <% if(theme.baseElement.href || theme.baseElement.target) { %>
+    <% if(theme.baseElement && (theme.baseElement.href || theme.baseElement.target)) { %>
         <base
             <% if(theme.baseElement.href) { %>
                 href="<%- theme.baseElement.href %>"
