@@ -19,5 +19,6 @@ comments: false
 站点使用 **Hexo + A4 主题**，部署在 **Cloudflare Pages**。
 
 - GitHub：https://github.com/caogenfunan123
-- 博客：https://xiamend.pages.dev
+- 博客：https://caogenfunan.me
 - RSS：[/atom.xml](/atom.xml)
+-邮箱：1995@139.com
