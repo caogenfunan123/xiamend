@@ -24,8 +24,7 @@ index:
   header:
     - "记录生活美好"
     - "写字，是为了把日子留住"
-    - "看过大海的人不会忘记海的广阔"
-  hitokoto: false
+    - "看过大海的人不会忘记海的广阔"  hitokoto: false
   footer: "小子的博客 · https://caogenfunan.me"
   titlePosition: left
   width: small
