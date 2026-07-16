@@ -18,3 +18,4 @@ layout: "index"
 - 部署：Cloudflare Pages
 
 如果你也在认真过自己的日子，希望这里能让你停一会儿。
+2026加油～
