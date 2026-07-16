@@ -22,11 +22,11 @@ showInMenu:
 
 index:
   header:
-    - "记录生活的点滴"
+    - "记录生活"
     - "写字，是为了把日子留住"
     - "看过大海的人不会忘记海的广阔"
   hitokoto: false
-  footer: "小子的博客 · https://xiamend.pages.dev"
+  footer: "小子的博客 · https://caogenfunan.me"
   titlePosition: left
   width: small
   list: false
@@ -40,7 +40,7 @@ footerLink:
   RSS: /atom.xml
 
 post:
-  footer: 🌊 写给认真生活的自己 🌊
+  footer: "小子的博客 · https://caogenfunan.me"
   themeInfo: true
   width: middle
   titlePosition: center
