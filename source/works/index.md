@@ -11,7 +11,7 @@ comments: false
 这里会慢慢整理我做过的事、写过的东西、想分享的作品。
 
 ## 博客本身
-- 本站： [小子的博客](https://xiamend.pages.dev)
+- 本站： [小子的博客](https://caogenfunan.me)
 - 框架：Hexo
 - 主题：A4
 - 部署：Cloudflare Pages
