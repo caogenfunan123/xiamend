@@ -1,27 +1,53 @@
 <div class="post-main">
-    <div class="post-md">
-            <h2>Page not found.</h2>
-            <br>
-            <div style="text-align: center;">
-                <!--这里要如何处理-->
-                <% if(theme.index.header != null || theme.index.header == "") {%>
-                    <div class="index-header-line" >
-                        <% if(theme.index.hitokoto) { %>
-                            <span id="quote" style="font-size: large;"></span>
-                            <script src="<%= url_for('/js/hitokoto.js') %>" ></script>
-                        <% } else { %>
-                            <div id="hiddenHeaderContentArray" style="display: none;">
-                                <% var headerContentArray = theme.index.header %>
-                                <% var headerContentArrayLength = headerContentArray.length %>
-                                <% for(let i = 0; i < headerContentArrayLength; i++) { %>
-                                    <span><%= theme.index.header[i] %></span>
-                                <% } %>
-                            </div>
-                            <span id="targetSpan" style="font-size: large;"></span>
+    <div class="post-md" style="text-align: center; padding: 60px 0;">
+        <div class="e404-emoji">🔍</div>
+        <h2 style="font-size: 3rem; margin: 20px 0 10px; color: #4f7dde;">404</h2>
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 8px;">页面不存在，或者已被移除。</p>
+        <p style="font-size: 0.9rem; color: #999; margin-bottom: 30px;">也许下面的句子能给你一点安慰：</p>
+
+        <% if(theme.index.header != null && theme.index.header != "") { %>
+            <div class="index-header-line" style="margin: 0 0 30px;">
+                <% if(theme.index.hitokoto) { %>
+                    <span id="quote" style="font-size: 1.05rem; color: #888; font-style: italic;"></span>
+                    <script src="<%= url_for('/js/hitokoto.js') %>"></script>
+                <% } else { %>
+                    <div id="hiddenHeaderContentArray" style="display: none;">
+                        <% var headerContentArray = theme.index.header %>
+                        <% for(let i = 0; i < headerContentArray.length; i++) { %>
+                            <span><%= theme.index.header[i] %></span>
                         <% } %>
                     </div>
+                    <span id="targetSpan" style="font-size: 1.05rem; color: #888; font-style: italic;"></span>
                 <% } %>
-                <a href="/">Go Back Home</a>
             </div>
+        <% } %>
+
+        <a href="/" class="e404-home-btn">← 返回首页</a>
     </div>
 </div>
+
+<style>
+.e404-emoji {
+    font-size: 4rem;
+    animation: e404Float 2s ease-in-out infinite;
+}
+@keyframes e404Float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.e404-home-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #4f7dde;
+    color: #fff !important;
+    border-radius: 24px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.e404-home-btn:hover {
+    background: #3b6bc5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 125, 222, 0.3);
+}
+</style>

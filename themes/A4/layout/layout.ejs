@@ -154,6 +154,21 @@
 </html>
 <script src="<%= url_for('/js/emojiHandler.js') %>"></script>
 <script src="<%= url_for('/js/search.js') %>"></script>
+<% if(is_post()) { %>
+<div class="reading-progress" id="readingProgress"></div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0;
+        bar.style.width = progress + '%';
+    });
+});
+</script>
+<% } %>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         wrapEmojis('.paper');
