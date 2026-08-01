@@ -114,10 +114,10 @@ comment:
     dataStrict: false
     dataReactionsEnabled: true
     dataEmitMetadata: false
-    dataInputPosition: bottom
+    dataInputPosition: top
     dataTheme: preferred_color_scheme
     dataLang: zh-CN
-    dataLoading: lazy
+    dataLoading:
     crossorigin: anonymous
     async: true
   waline:
