@@ -26,7 +26,7 @@ index:
     - "写字，是为了把日子留住"
     - "看过大海的人不会忘记海的广阔"
   hitokoto: false
-  footer: "小子的博客 · https://xiamend.pages.dev"
+  footer: "小子的博客 · https://caogenfunan.me"
   titlePosition: left
   width: small
   list: false
@@ -102,8 +102,24 @@ lightgallery:
   pager: false
 
 comment:
-  enable: false
-  use: waline
+  enable: true
+  use: giscus
+  giscus:
+    dataRepo: caogenfunan123/xiamend
+    dataRepoId: R_kgDOPg0Wvg
+    dataCategory: Announcements
+    dataCategoryId: DIC_kwDOPg0Wvs4DCc1o
+    dataMapping: pathname
+    dataTerm:
+    dataStrict: false
+    dataReactionsEnabled: true
+    dataEmitMetadata: false
+    dataInputPosition: bottom
+    dataTheme: preferred_color_scheme
+    dataLang: zh-CN
+    dataLoading: lazy
+    crossorigin: anonymous
+    async: true
   waline:
     serverUrl:
     lang: zh-CN
