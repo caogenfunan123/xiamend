@@ -3,17 +3,14 @@ title: 留言
 date: 2026-07-16 00:00:00
 type: "comments"
 layout: "post"
-comments: false
+comments: true
 ---
 
 # 留言
 
-欢迎留言。
+欢迎留言，想说点什么就说吧。
 
-目前站点评论系统还没接外部服务，你可以通过下面方式联系我：
+也可以通过以下方式联系我：
 
-- GitHub：https://github.com/caogenfunan123
-- 博客：https://caogenfunan.me
--邮箱1995@139.com
-
-> 之后如果接上评论系统，这一页会作为统一留言入口。
+- GitHub：[https://github.com/caogenfunan123](https://github.com/caogenfunan123)
+- 邮箱：[1995@139.com](mailto:1995@139.com)

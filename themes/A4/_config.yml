@@ -101,8 +101,24 @@ lightgallery:
   pager: false
 
 comment:
-  enable: false
-  use: waline
+  enable: true
+  use: giscus
+  giscus:
+    dataRepo: caogenfunan123/xiamend
+    dataRepoId: R_kgDOPg0Wvg
+    dataCategory: Announcements
+    dataCategoryId: DIC_kwDOPg0Wvs4DCc1o
+    dataMapping: pathname
+    dataTerm:
+    dataStrict: false
+    dataReactionsEnabled: true
+    dataEmitMetadata: false
+    dataInputPosition: bottom
+    dataTheme: preferred_color_scheme
+    dataLang: zh-CN
+    dataLoading: lazy
+    crossorigin: anonymous
+    async: true
   waline:
     serverUrl:
     lang: zh-CN

@@ -8,3 +8,178 @@
     justify-content: flex-start;
     align-content: center;
 }
+
+/* ========== 评论区域优化 ========== */
+
+/* 评论容器入场动画 */
+.comments-container {
+    animation: commentFadeIn 0.6s ease-out;
+}
+
+@keyframes commentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 评论标题样式 */
+.comment-area-title {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.comment-area-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #4f7dde, #7b9eeb);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.comment-area-title:hover::after {
+    width: 80px;
+}
+
+/* Giscus 评论框优化 */
+#giscus {
+    margin-top: 10px;
+}
+
+/* 评论回复按钮悬停动效 */
+.wl-card .wl-reply {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wl-card .wl-reply:hover {
+    transform: translateX(3px);
+    color: #4f7dde !important;
+}
+
+/* 评论卡片悬停微动效 */
+.wl-card-item {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 8px;
+}
+
+.wl-card-item:hover {
+    transform: translateX(4px);
+}
+
+/* 评论输入框聚焦效果 */
+.wl-editor:focus,
+.wl-input:focus {
+    box-shadow: 0 0 0 3px rgba(79, 125, 222, 0.15);
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* 提交按钮动效 */
+.wl-btn.primary {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.wl-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 125, 222, 0.3);
+}
+
+.wl-btn.primary:active {
+    transform: translateY(0);
+}
+
+/* 评论点赞按钮动效 */
+.wl-card .wl-like {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wl-card .wl-like:hover {
+    transform: scale(1.2);
+}
+
+.wl-card .wl-like.active {
+    animation: likePop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes likePop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+/* 暗色模式下评论适配 */
+.dark-mode .comment-area-title {
+    color: #e0e0e0;
+}
+
+.dark-mode .wl-card-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+/* ========== 页面加载优化 ========== */
+
+/* 图片懒加载占位 */
+img[loading="lazy"] {
+    transition: opacity 0.5s ease;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== 移动端优化 ========== */
+
+@media (max-width: 600px) {
+    .comment-area-title {
+        font-size: 1.2rem;
+    }
+
+    .wl-card-item:hover {
+        transform: none;
+    }
+
+    .paper-main {
+        padding: 24px 4vw 0px;
+    }
+}
+
+/* ========== 链接点击波纹效果 ========== */
+
+.post-footer-pre-next a,
+.nav a,
+.paginator a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.post-footer-pre-next a::after,
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4f7dde;
+    transition: width 0.3s ease;
+}
+
+.post-footer-pre-next a:hover::after,
+.nav a:hover::after {
+    width: 100%;
+}

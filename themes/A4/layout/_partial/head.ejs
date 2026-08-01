@@ -1,8 +1,20 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <meta name="description" content="<%= page.title %>" />
+    <meta name="description" content="<%= config.description %>" />
+    <meta name="keywords" content="<%= config.keywords %>" />
+    <meta name="author" content="<%= config.author %>" />
     <meta name="hexo-theme-A4" content="<%= theme.version %>" />
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>" />
+    <meta property="og:title" content="<%= page.title || config.title %>" />
+    <meta property="og:description" content="<%= page.description || config.description %>" />
+    <meta property="og:url" content="<%= url %>" />
+    <meta property="og:site_name" content="<%= config.title %>" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<%= page.title || config.title %>" />
+    <meta name="twitter:description" content="<%= page.description || config.description %>" />
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %> RSS" href="<%- url_for('/atom.xml') %>">
     <link rel="alternate icon" type="image/webp" href="<%- url_for(theme.favicon) %>">
     <title><%= (theme.displayTitleInTab && page.title ? page.title + ' | ' : '') + config.title + (config.subtitle ? ' | ' + config.subtitle : '') %></title>
