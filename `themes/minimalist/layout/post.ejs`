@@ -1,0 +1,10 @@
+---
+layout: layout
+---
+<article class="post">
+  <h1 class="post-title"><%= page.title %></h1>
+  <time class="post-date"><%= date(page.date, 'YYYY-MM-DD') %></time>
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+</article>
