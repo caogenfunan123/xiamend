@@ -1,0 +1,11 @@
+# 极简主题配置文件
+menu:
+  首页: /
+  归档: /archives/
+
+# 首页摘要展示相关
+excerpt_length: 120
+
+# 页脚版权信息
+footer:
+  copyright: © 小子的博客
