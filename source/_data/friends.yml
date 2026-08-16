@@ -1,0 +1,6 @@
+# 友链数据：在此维护友情链接
+# 每项字段：name（昵称）、link（网址）、desc（简介）
+# 示例：
+# - name: 示例友链
+#   link: https://example.com
+#   desc: 这是一个示例友链
