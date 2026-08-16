@@ -1,0 +1,11 @@
+<% if (theme.profile) { %>
+<section class="home-section">
+  <h2 class="section-title">👤 <%= theme.profile.title || '关于' %></h2>
+  <div class="profile-content">
+    <p><%= theme.profile.content %></p>
+    <% if (theme.profile.more_text) { %>
+    <p class="profile-more">💡 <%= theme.profile.more_text %></p>
+    <% } %>
+  </div>
+</section>
+<% } %>
