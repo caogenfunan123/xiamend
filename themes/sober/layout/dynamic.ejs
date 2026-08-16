@@ -1,0 +1,19 @@
+<h1 class="page-title">💬 <%= page.title || theme.dynamics.title || '动态' %></h1>
+<p class="dynamics-subtitle">最近的动态与分享 ✨</p>
+<% var dynItems = []; if (typeof all_dynamics === 'function') { try { dynItems = all_dynamics() || []; } catch (e) { dynItems = []; } } %>
+<div class="dynamics">
+  <% if (dynItems.length) { dynItems.forEach(function(item){ %>
+  <div class="dynamic-item">
+    <div class="dynamic-date">🗓 <%= ddate(item.date) %></div>
+    <% if (item.title && item.title !== '未命名') { %><div class="dynamic-title">💬 <%= item.title %></div><% } %>
+    <% if (item.raw) { %>
+    <div class="dynamic-content"><%- md(item.content) %></div>
+    <% } else { %>
+    <div class="dynamic-content"><%- item.content %></div>
+    <% } %>
+    <% if (item.link) { %><a class="dynamic-post-link" href="<%= item.link %>">查看全文 →</a><% } %>
+  </div>
+  <% }) } else { %>
+  <p class="dynamics-empty">还没有动态，去 <code>source/_data/dynamics.yml</code> 添加第一条吧。</p>
+  <% } %>
+</div>
